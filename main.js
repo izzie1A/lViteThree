@@ -94,11 +94,10 @@ function moveCamera() {
 document.body.onscroll = moveCamera;
 
 // Animation Loop
-let counter = 0;
-let rRate = 0.01;
-let height = 5;
 
 // gameloop
+let counter = 0;
+let rRate = 0.01;
 function animate() {
   requestAnimationFrame(animate);
   counter += rRate;
@@ -108,7 +107,8 @@ function animate() {
 
   camera.position.y = camera.position.y+sin*0.01;
   earth.rotation.y = earth.rotation.y+((sin+2)/2*0.01);
-  earth.rotation.x += sin*0.00005;
+  // earth.rotation.x += cos*0.00005;
   renderer.render(scene, camera);
 }
 animate();
+
