@@ -79,7 +79,7 @@ function sleep(ms) {
 const numRows = 10;
 const numCols = 20;
 const initialGrid = initializeGrid(numRows, numCols);
-printCellularAutomata(initialGrid, 10);
+// printCellularAutomata(initialGrid, 10);
 
 function initializeGrid(rows, cols) {
   const grid = [];
@@ -95,4 +95,22 @@ function initializeGrid(rows, cols) {
 
   return grid;
 }
+
+
 console.log('m2 worked');
+// procesdural generation
+// Function to generate a random string of given length
+function generateRandomString(length) {
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  console.log(result)
+  return result;
+}
+
+// Generate a random string of length 10
+const randomString = generateRandomString(10);
+console.warn(randomString); // Output the generated string
